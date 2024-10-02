@@ -14,3 +14,5 @@ const Home = () => {
 };
 
 export default Home;
+
+/* onKeyPress={(e) => e.key === 'Enter' && handleSearch()} */
