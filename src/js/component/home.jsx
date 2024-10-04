@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 
-
-
-
-
 const Home = () => {
 	const [ inputValue, setInputValue ] = useState("");
 	const [ todos, setTodos ] = useState([]);
@@ -17,7 +13,9 @@ const Home = () => {
 	const handleDeleteTodo = (index) => {
 		setTodos(todos.filter((todo, i) => index !== i))
 	};
-
+	const resetList = () => {
+        handleDeleteTodo(0)
+    }
 
 	return (
 		<div className="container">
@@ -51,6 +49,7 @@ const Home = () => {
 				<div className="card-footer text-secondary">
 					{todos.length} {todos.length === 1 ? "item" : "items"} left.
 				</div>
+				<button onClick={resetList} className="btn btn-primary m-2">Reset List</button>
 			</div>
 		</div>	
 	);
