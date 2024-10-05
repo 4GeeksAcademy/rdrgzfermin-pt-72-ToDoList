@@ -14,9 +14,8 @@ const Home = () => {
 		setTodos(todos.filter((todo, i) => index !== i))
 	};
 	const resetList = () => {
-        handleDeleteTodo(0)
-    }
-
+		setTodos([]);
+	};
 	return (
 		<div className="container">
 			<h1 className="text-center mt-5">todos</h1>
